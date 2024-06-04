@@ -107,7 +107,7 @@ section {
 
 #Intro {
     display: flex;
-    height: 70vh;
+    height: 80vh;
     /* width: calc(100% - 40px); */
     border: 2px solid black;
     box-sizing: border-box;
