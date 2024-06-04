@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+  
+}
+
+.navbar {
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    color: rgb(246, 243, 245);
+    background-color: black;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: 800;
+    border: 2px solid rgb(252, 249, 251);
+}
+
+a:link {
+    color: rgb(248, 245, 247);
+    text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(253, 154, 204);
+}
+
+a:visited {
+    color: rgb(247, 244, 245);
+}
+
+@media only screen and (orientation: portrait) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        height: 100vh;
+    }
+
+    button {
+        width: 100%;
+
+    }
+
+    #Intro {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        height: 100vh;
+    }
+
+    .box1,
+    .box2 {
+        width: 100%;
+        border: none;
+        max-height: 40%;
+        padding: 0px;
+    }
+
+    #cont {
+        text-align: center;
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 450px 450px 450px 450px !important;
+        gap: 30px;
+    }
+    #cont1 {
+        text-align: center;
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 300px 300px 300px 300px !important;
+        gap: 30px;
+    }
+    #cont2{
+        text-align: center;
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 250px 250px 250px  !important;
+        gap: 30px;
+    }
+#review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+}
+
+section {
+    background-color: rgb(253, 154, 204);
+    margin: 0;
+    padding: 0;
+}
+
+#Intro {
+    display: flex;
+    height: 70vh;
+    /* width: calc(100% - 40px); */
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin: 0 10px 0px 10px;
+    padding: 15px;
+    background-color: black;
+}
+
+.box1 {
+    
+    height: 80%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+}
+
+.box2 {
+    border: 2px solid black;
+    height: 100%;
+    background-color: black;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 img {
+    animation-name: svg;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes svg {
+    from {}
+
+    to {
+        height: 100%;
+        width: auto;
+    }
+}
+
+#Intro>.box1 {
+    flex-direction: column;
+}
+
+.title {
+    font-family: "Kaushan Script";
+    font-size: xx-large;
+    font-weight: 700;
+    color: white;
+}
+
+.subtitle {
+    font-family: "Dancing Script";
+    font-size: xx-large;
+    font-weight: 300;
+    color: white;
+}
+
+#FeaturedPlaylists, #RecommendedAlbums,#UserReviews,#Footer {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 10px 0 10px;
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    align-items: center;
+}
+
+.second {
+    color: black;
+    font-size: large;
+}
+
+.seconds {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+
+.container {
+
+    margin: 0 10px 0 10px;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 450px;
+    gap: 30px;
+
+}
+
+.boxes {
+    padding: 15px;
+    background-color: white;
+    border: 2px solid hotpink;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow:hidden ;
+}
+
+.boxes img {
+    border-radius: 20px;
+    border: 2px solid hotpink;
+    margin: 15px 5px 0 5px;
+}
+
+.heading {
+    padding: 10px 0 5px 0;
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.follow-toggle,
+.follow-toggle1,
+.follow-toggle2,
+.follow-toggle3 {
+    display: none;
+}
+
+.follow-button,
+.follow-button1,
+.follow-button2,
+.follow-button3 {
+
+    padding: 2px 5px;
+    border: 1px solid black;
+    font-weight: 300;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.follow-toggle:checked+.follow-button {
+    background-color: green;
+    color: white;
+}
+
+.follow-toggle:checked+.follow-button::after {
+    content: "Following";
+}
+
+.follow-toggle:not(:checked)+.follow-button::after {
+    content: "Follow";
+}
+
+.follow-toggle1:checked+.follow-button1 {
+    background-color: green;
+    color: white;
+}
+
+.follow-toggle1:checked+.follow-button1::after {
+    content: "Following";
+}
+
+.follow-toggle1:not(:checked)+.follow-button1::after {
+    content: "Follow";
+}
+
+.follow-toggle2:checked+.follow-button2 {
+    background-color: green;
+    color: white;
+}
+
+.follow-toggle2:checked+.follow-button2::after {
+    content: "Following";
+}
+
+.follow-toggle2:not(:checked)+.follow-button2::after {
+    content: "Follow";
+}
+
+.follow-toggle3:checked+.follow-button3 {
+    background-color: green;
+    color: white;
+}
+
+.follow-toggle3:checked+.follow-button3::after {
+    content: "Following";
+}
+
+.follow-toggle3:not(:checked)+.follow-button3::after {
+    content: "Follow";
+}
+
+.pos {
+    display: flex;
+    color: hotpink;
+}
+.sbox{
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: 500;
+    word-spacing: 75%;
+}
+.container1 {
+
+    
+    margin: 0 10px 0 10px;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 400px;
+    gap: 30px;
+  
+
+}
+.container1 img{
+    height: 180px;
+    width: 180px;
+}
+.search{
+    margin: 0 10px 0 10px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    height: 7vh;
+    background-color:rgb(253, 154, 204);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchbox{
+    width: 40vw;
+    height: 80%;
+    border-radius: 20px;
+    background-color: rgb(245, 243, 243);
+    padding: 5px 10px 5px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(67, 66, 66);
+  
+  
+}
+.searchbox:hover{
+    cursor: text;
+    border: 2px solid rgb(6, 6, 6);
+}
+/* .ho{
+    height: 280px;
+}
+.ho:hover{
+transform: scale(1.01,1.01);
+height: 340px;
+
+}
+.know{
+    width: auto;
+    height: 20px;
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 5px;
+  cursor: pointer;
+}
+.know:hover{
+color: white;
+background-color:rgb(253, 154, 204) ;
+font-weight: 300;
+border-color: rgb(253, 154, 204);
+} */
+a{
+    color: black;
+}
+.ho {
+    height: 280px;
+    /* position: relative; */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+
+
+.ho:hover {
+    transform: scale(1.05);
+    height: 300px;
+}
+
+
+
+.know {
+    color: black;
+    width: auto;
+    height: 20px;
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.know.more {
+    color: black;
+    display: block;
+
+}
+
+.ho:hover .know {
+    opacity: 1;
+}
+
+.know:hover {
+    color: white;
+    background-color: rgb(253, 154, 204);
+    font-weight: 300;
+    border-color: rgb(253, 154, 204);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    /* z-index: 1; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal:target {
+    display: block;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.album-cover {
+    width: 100%;
+    height: auto;
+}
+
+.album-title {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.album-artist {
+    font-size: 18px;
+    color: #666;
+}
+
+.album-description {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.listen-now {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.listen-now:hover {
+    background-color: #45a049;
+}
+
+.container2 {
+
+    margin: 0 10px 0 10px;
+   
+    
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 300px;
+    gap: 25px;
+
+}
+.review{
+    display: flex;
+    border: 5px solid black;
+    margin : 0 10px 10px 10px;
+}
+
+.form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 75%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+   
+}
+
+input[type="submit"] {
+    background-color: rgb(65, 203, 11);
+    font-size: medium;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    padding: 5px;
+    
+}
+
+
+
+input[type="submit"]:hover {
+    background-color: rgb(9, 95, 46);
+}
+#Footer {
+    height: 20vh;
+        background-color: black;
+        margin: 0;
+       
+       
+}
+.Footer {
+   
+    padding: 25px;
+        display: flex;
+        flex-direction: row;
+    justify-content: space-between;
+       /* align-items: flex-start; */
+        color: white;
+}
+.fw{
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
